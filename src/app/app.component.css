@@ -1,0 +1,20 @@
+
+
+@font-face{
+font-family: "pokefont";
+src: url("../assets/font/pokemon-solid.ttf")format("truetype");
+}
+
+#mainTitle{
+    color: crimson;
+    font-family: 'pokefont',Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 300%;
+    margin: auto;
+}
+
+#subHeader{
+    color: blueviolet;
+    text-align: center;
+}

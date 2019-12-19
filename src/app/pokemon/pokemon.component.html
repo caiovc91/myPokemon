@@ -1,0 +1,30 @@
+<h2>{{pokemon.name | uppercase}} Details</h2>
+<div><span>id: </span>{{pokemon.id}}</div>
+<div><span>name: </span>{{pokemon.name}}</div>
+<div><span>level: </span>{{pokemon.level}}</div>
+<div><span>weight: </span>{{pokemon.weight}}</div>
+<div><span>height: </span>{{pokemon.height}}</div>
+<div><span>type: </span>{{pokemon.type}}</div>
+<div><span>nickname: </span>{{pokemon.nickname}}</div>
+<div><span>moveset: </span>{{pokemon.moveset}}</div>
+
+<div>
+  <ul>
+    <li><label>NickName:<input [(ngModel)]="pokemon.nickname" placeholder="nickname"></label></li>
+    <li><label>Level:<input [(ngModel)]="pokemon.level" placeholder="level"></label></li>
+    <li><label>Moveset:<input [(ngModel)]="pokemon.moveset" placeholder="moveset"></label></li>
+  </ul>
+</div>
+
+
+
+<div>
+  <ul class="pokemons">
+    <li *ngFor="let pokemon of pokemons"
+      [class.selected]="pokemon === selectedPokemon"
+      (click)="onSelect(pokemon)">
+      <span class="picture">{{pokemon.id}}</span> {{pokemon.name}}
+    </li>
+  </ul>
+  <app-pokemon-detail [pokemon]="selectedPokemon"></app-pokemon-detail>
+</div>
